@@ -16,3 +16,26 @@ The code was written on a windows machine with the target as windows, compiled u
 - Sprite generation
 - Physics engine
 - Audio Support
+
+
+## Usage
+
+Add the header file to your project. 
+In your project file give defination to the virtual functions 
+
+main should look like this
+```cpp
+	int main()
+	{
+		CMDGameEngine game;
+
+		// Create a console with resolution 160x100 characters
+		// Each character occupies 8x8 pixels
+		game.ConstructConsole(160, 100, 8, 8);
+
+		// Start the engine!
+		game.Start();
+
+		return 0;
+	}
+```
