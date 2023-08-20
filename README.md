@@ -4,7 +4,7 @@
 
 ## Introduction 
 
-Engine for game and graphics. A single-file/header-only library in C++ for creating graphics; with extension for implementing a game loop. Utilising the terminals in-built capability to render truecolor (xterm-256color). The project 
+Engine for game and graphics. A single-file/header-only library in C++ for creating graphics; with extension for implementing a game loop. Utilising the terminals in-built capability to render truecolor (xterm-256color). 
 
 [NOTE]
 check dev branch porting to gcc from msvc
