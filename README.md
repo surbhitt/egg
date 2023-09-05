@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="./assets/egg.png"/ width=1000px>
+    <img src="./assets/egg.png"/>
 </p>
 
 ## Introduction 
