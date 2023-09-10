@@ -2,7 +2,7 @@
     <img src="https://raw.githubusercontent.com/surbhitt/egg/main/assets/egg.png"/ height=35% width=35%>
 </p>
 
-## Introduction 
+# Introduction 
 
 Engine for game and graphics. A single-file/header-only library in C++ for creating graphics; with extension for implementing a game loop. Utilising the terminals in-built capability to render truecolor (xterm-256color). 
 
@@ -18,7 +18,7 @@ The code was written on a windows machine with the target as windows, compiled u
 - Audio Support
 
 
-## Usage
+# Usage
 
 Add the header file to your project. 
 In your project file give defination to the virtual functions 
