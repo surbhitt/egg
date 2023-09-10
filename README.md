@@ -27,7 +27,7 @@ main should look like this
 ```cpp
 	int main()
 	{
-		CMDGameEngine game;
+		EGG game;
 
 		// Create a console with resolution 160x100 characters
 		// Each character occupies 8x8 pixels
