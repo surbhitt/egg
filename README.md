@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="./assets/egg.png"/ height=300px>
+    <img src="https://raw.githubusercontent.com/surbhitt/egg/main/assets/egg.png"/ height=300px>
 </p>
 
 ## Introduction 
