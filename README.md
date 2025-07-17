@@ -1,6 +1,5 @@
-![egg](./assets/egg.png)
-
 <img src="./assets/egg.png" alt="logo" width="200" height="150">
+
 ## EGG (Engine for Game & Graphics)
 
 A single-file/header-only library for generating pixel graphics on the console.  
