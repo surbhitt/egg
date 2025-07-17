@@ -4,6 +4,9 @@
 #include <iostream>
 #include <string>
 #include <unistd.h>
+#include <termios.h>
+#include <sys/ioctl.h>
+
 
 using namespace std;
 
@@ -25,6 +28,7 @@ uint32_t red = 0xff0000;
 uint32_t green = 0x00ff00;
 uint32_t blue = 0x0000ff;
 uint32_t white = 0xffffff;
+uint32_t black = 0x000000;
 
 bool within_canvas(int rows, int cols) {
     return (rows < CANVAS_HEIGHT && cols < CANVAS_WIDTH);
@@ -142,3 +146,46 @@ void clear_screen() {
     clear_till_eos();
     hide_cursor();
 }
+
+/**
+ Linux (POSIX) implementation of kbhit().
+ Morgan McGuire, morgan@cs.brown.edu
+ */
+int kbhit() {
+    static const int STDIN = 0;
+    // persists the variable across function calls
+    static bool initialized = false;
+
+    if (! initialized) {
+        termios term;
+        tcgetattr(STDIN, &term);
+        // set to non canonical mode
+        // to turn off line buffering
+        term.c_lflag &= ~(ICANON | ECHO);
+        tcsetattr(STDIN, TCSANOW, &term);
+        setbuf(stdin, NULL);
+        initialized = true;
+    }
+
+    int bytesWaiting;
+    ioctl(STDIN, FIONREAD, &bytesWaiting);
+    return bytesWaiting;
+}
+
+// get keyboard input
+char get_kb_in() {
+    char ch = '\0';
+    if (kbhit()) {
+        ch = getchar();
+    }
+    return ch;
+}
+
+// check for q key press
+bool end_gl() {
+    // end game loop
+    char ch = get_kb_in();
+    if (ch == 'q' || ch == 'Q') return true;
+    return false;
+}
+

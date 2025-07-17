@@ -11,3 +11,11 @@ demo_game_of_life:
 	$(CC) $(CFLAGS) -o ./demo/dgol.out ./demo/demo_game_of_life.cpp
 	./demo/dgol.out
 
+demo_snake:
+	$(CC) $(CFLAGS) -o ./demo/dsnk.out ./demo/demo_snake.cpp
+	./demo/dsnk.out
+
+demo_maze_gen:
+	$(CC) $(CFLAGS) -o ./demo/dmzgn.out ./demo/demo_maze_gen.cpp
+	./demo/dmzgn.out
+
