@@ -1,15 +1,14 @@
 ![egg](./assets/egg.png)
 
+<img src="./assets/egg.png" alt="logo" width="200" height="150">
 ## EGG (Engine for Game & Graphics)
 
 A single-file/header-only library for generating pixel graphics on the console.  
 No external libraries like ncurses — uses only cursor escape sequences.
 
-<br><br>
-
+<br>
 **Demo**
 <br>
-
 `$ make demo_maze_gen`  
 <img src="./assets/dmzgn.gif" alt="demo: maze generator" width="800" height="600">
 
